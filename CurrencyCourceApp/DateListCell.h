@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  DateListCellTableViewCell.h
 //  CurrencyCourceApp
 //
-//  Created by Elerman on 28.02.17.
+//  Created by Elerman on 08.03.17.
 //  Copyright © 2017 Elerman. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DateListCell : UITableViewCell
 
 @end
-
