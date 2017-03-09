@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurrencyCourceApp/DateListController.m"
-            timestampString = "510687511.363471"
+            timestampString = "510766608.894978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "-updateRowCount"
             landmarkType = "7">
          </BreakpointContent>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4416B4EA981D71545713DC4A /* libPods-CurrencyCourceApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E232532631DA8A18B8FD2BCC /* libPods-CurrencyCourceApp.a */; };
+		7E020E1B1E71AE5E00E96905 /* MyXmlParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E020E1A1E71AE5E00E96905 /* MyXmlParserDelegate.m */; };
 		7EE5D57C1E65FD88005B0AC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D57B1E65FD88005B0AC4 /* main.m */; };
 		7EE5D57F1E65FD88005B0AC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D57E1E65FD88005B0AC4 /* AppDelegate.m */; };
 		7EE5D5821E65FD88005B0AC4 /* DateListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D5811E65FD88005B0AC4 /* DateListController.m */; };
@@ -15,12 +16,13 @@
 		7EE5D5871E65FD88005B0AC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE5D5861E65FD88005B0AC4 /* Assets.xcassets */; };
 		7EE5D58A1E65FD88005B0AC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE5D5881E65FD88005B0AC4 /* LaunchScreen.storyboard */; };
 		7EE5D5961E6603E7005B0AC4 /* CurrencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D5951E6603E7005B0AC4 /* CurrencyViewController.m */; };
-		7EE5D5A21E6E158B005B0AC4 /* MyXmlParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D5A11E6E158B005B0AC4 /* MyXmlParserDelegate.m */; };
 		7EE5D5A51E6F5F64005B0AC4 /* DateListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D5A41E6F5F64005B0AC4 /* DateListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B6D3B3D734F400EE7632C6D /* Pods-CurrencyCourceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCourceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurrencyCourceApp/Pods-CurrencyCourceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7E020E191E71AE5E00E96905 /* MyXmlParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyXmlParserDelegate.h; sourceTree = "<group>"; };
+		7E020E1A1E71AE5E00E96905 /* MyXmlParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyXmlParserDelegate.m; sourceTree = "<group>"; };
 		7EE5D5771E65FD88005B0AC4 /* CurrencyCourceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyCourceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE5D57B1E65FD88005B0AC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EE5D57D1E65FD88005B0AC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,8 +35,6 @@
 		7EE5D58B1E65FD88005B0AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EE5D5941E6603E7005B0AC4 /* CurrencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyViewController.h; sourceTree = "<group>"; };
 		7EE5D5951E6603E7005B0AC4 /* CurrencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyViewController.m; sourceTree = "<group>"; };
-		7EE5D5A01E6E158B005B0AC4 /* MyXmlParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyXmlParserDelegate.h; path = ../MyXmlParserDelegate.h; sourceTree = "<group>"; };
-		7EE5D5A11E6E158B005B0AC4 /* MyXmlParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyXmlParserDelegate.m; path = ../MyXmlParserDelegate.m; sourceTree = "<group>"; };
 		7EE5D5A31E6F5F64005B0AC4 /* DateListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateListCell.h; sourceTree = "<group>"; };
 		7EE5D5A41E6F5F64005B0AC4 /* DateListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateListCell.m; sourceTree = "<group>"; };
 		8D230CD78DCD637BB12A47BB /* Pods-CurrencyCourceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCourceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurrencyCourceApp/Pods-CurrencyCourceApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,14 +82,14 @@
 		7EE5D5791E65FD88005B0AC4 /* CurrencyCourceApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E020E191E71AE5E00E96905 /* MyXmlParserDelegate.h */,
+				7E020E1A1E71AE5E00E96905 /* MyXmlParserDelegate.m */,
 				7EE5D5A31E6F5F64005B0AC4 /* DateListCell.h */,
 				7EE5D5A41E6F5F64005B0AC4 /* DateListCell.m */,
 				7EE5D5801E65FD88005B0AC4 /* DateListController.h */,
 				7EE5D5811E65FD88005B0AC4 /* DateListController.m */,
 				7EE5D5941E6603E7005B0AC4 /* CurrencyViewController.h */,
 				7EE5D5951E6603E7005B0AC4 /* CurrencyViewController.m */,
-				7EE5D5A01E6E158B005B0AC4 /* MyXmlParserDelegate.h */,
-				7EE5D5A11E6E158B005B0AC4 /* MyXmlParserDelegate.m */,
 				7EE5D57D1E65FD88005B0AC4 /* AppDelegate.h */,
 				7EE5D57E1E65FD88005B0AC4 /* AppDelegate.m */,
 				7EE5D5831E65FD88005B0AC4 /* Main.storyboard */,
@@ -242,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EE5D5821E65FD88005B0AC4 /* DateListController.m in Sources */,
-				7EE5D5A21E6E158B005B0AC4 /* MyXmlParserDelegate.m in Sources */,
+				7E020E1B1E71AE5E00E96905 /* MyXmlParserDelegate.m in Sources */,
 				7EE5D5961E6603E7005B0AC4 /* CurrencyViewController.m in Sources */,
 				7EE5D57F1E65FD88005B0AC4 /* AppDelegate.m in Sources */,
 				7EE5D57C1E65FD88005B0AC4 /* main.m in Sources */,

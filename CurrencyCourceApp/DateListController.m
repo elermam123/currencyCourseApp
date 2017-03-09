@@ -16,6 +16,7 @@
 @property (assign,nonatomic) BOOL loadingData;
 
 @property NSInteger dateDays;
+@property (nonatomic) NSMutableArray *dateArray;
 
 
 
@@ -43,6 +44,7 @@ static NSUInteger addRowCount = 25;
     calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy"];
+    _dateArray = [NSMutableArray array];
     
     [self updateRowCount];
 
@@ -62,19 +64,33 @@ static NSUInteger addRowCount = 25;
 
 -(void) updateRowCount{
     
-    NSLog(@"DateRowsCount = %ld", self.dateRowsCount);
+    //NSLog(@"DateRowsCount = %ld", self.dateRowsCount);
     
     NSMutableArray *newPaths = [NSMutableArray array];
+    
     
     for(NSUInteger i = self.dateRowsCount; i < self.dateRowsCount + addRowCount; i++){
         
         [newPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+        if(i == 0){
+            _dateDays = 0;
+        }
+        else{
+            _dateDays = components.day - 1;
+        }
+        [components setValue:_dateDays forComponent:NSCalendarUnitDay];
+        
+        date = [calendar dateByAddingComponents:components toDate:[NSDate date] options:0];
+        
+        
+        NSString *dateString = [dateFormatter stringFromDate:date];
+
+        [_dateArray addObject:dateString];
     }
     
     [self.tableView beginUpdates];
-    [self.tableView insertRowsAtIndexPaths:newPaths withRowAnimation:UITableViewRowAnimationFade];
     self.dateRowsCount += addRowCount;
-    NSLog(@"newPaths = %@", newPaths);
+    [self.tableView insertRowsAtIndexPaths:newPaths withRowAnimation:UITableViewRowAnimationFade];
     
     [self.tableView endUpdates];
 
@@ -84,23 +100,7 @@ static NSUInteger addRowCount = 25;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString* identifier = @"Cell";
-    NSLog(@"date = %@", date);
-    NSLog(@"_dateDays = %ld",_dateDays);
-    NSLog(@"components.day =%ld", components.day);
-    NSLog(@"index.path row = %ld", indexPath.row);
-    if(indexPath.row == 0){
-        _dateDays = 0;
-        
-    }
-    else
-        _dateDays = components.day - 1;
-    [components setValue:_dateDays forComponent:NSCalendarUnitDay];
-    //components.day = dateDays;
-    //NSLog(@"components.day = %ld", components.day);
-    date = [calendar dateByAddingComponents:components toDate:[NSDate date] options:0];
-    NSLog(@"date = %@", date);
-    
-    NSString *dateString = [dateFormatter stringFromDate:date];
+   
 
     DateListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
@@ -108,10 +108,9 @@ static NSUInteger addRowCount = 25;
         cell = [[DateListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
+    NSString* dateStr = [_dateArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = dateStr;
     
-    cell.textLabel.text = dateString;
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     return cell;
 }
@@ -122,7 +121,7 @@ static NSUInteger addRowCount = 25;
     if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
         if(!self.loadingData){
             self.loadingData = YES;
-            //[self updateRowCount];
+           [self updateRowCount];
         }
     }
 }
